@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   myca:
     build: .
@@ -12,5 +10,6 @@ services:
       - "./cert:/etc/pki/cert"
       - "./create_cert.sh:/create_cert.sh"
       - "./create_cert_use_san.sh:/create_cert_use_san.sh"
+      - "./subjectnames.txt:/subjectnames.txt"
     tty: true
     stdin_open: true

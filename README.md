@@ -1,14 +1,18 @@
 # 構築手順
 1. コンテナ作成
 ```
+cp .env.sample .env
 docker compose up -d
 ```
 
 # 証明書発行
-1. DockerDestopからコンテナ内に入る。
+1. コンテナ内に入る。
+```bash
+winpty docker container exec -it myca ash
+```
 
 2. shを実行。
-```
+```bash
 sh create_cert_use_san.sh
 ```
 
