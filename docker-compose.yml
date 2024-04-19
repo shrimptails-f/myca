@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  myca:
+    build: .
+    env_file:
+      - .env
+    container_name: myca
+    hostname: myca
+    volumes:
+      - "./:/myca"
+      - "./cert:/etc/pki/cert"
+      - "./create_cert.sh:/create_cert.sh"
+      - "./create_cert_use_san.sh:/create_cert_use_san.sh"
+    tty: true
+    stdin_open: true
