@@ -23,3 +23,9 @@ server.key
 ```
 一般的に証明書（server.crt）は`/etc/ssl/certs`に配置するらしい。  
 秘密鍵（server.key）は`/etc/ssl/private`、`/etc/pki/tls/private`に配置するらしい。
+
+# フロント(Google Chrome)で使う方法
+1. 設定→プライバシーとセキュリティ→セキュリティ→証明書の管理を開く
+2. 配置したserver.crtを信頼されたルート証明機関として読込む
+3. Chromeで開いているウインドウをすべて閉じる←大事
+4. https://localhost:3000/ とかでローカル環境でアクセス。
